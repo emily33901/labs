@@ -61,14 +61,22 @@
 <span class="token keyword">def</span> <span class="token function">sumOfNumbers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     n <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter n"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Some of first n is "</span><span class="token punctuation">,</span> <span class="token builtin">reduce</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> x <span class="token operator">+</span> y<span class="token punctuation">,</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""
+    total = 0
+    for i in range(n+1):
+        total += i
+    print("Sum of n is", total)
+    """</span>
+
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Sum of first n is "</span><span class="token punctuation">,</span> <span class="token builtin">reduce</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> x <span class="token operator">+</span> y<span class="token punctuation">,</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 <span class="token keyword">def</span> <span class="token function">averageOfNumbers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     n <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"How many numbers "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
     total <span class="token operator">=</span> <span class="token number">0</span>
 
-    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span> n<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
         total <span class="token operator">+=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter a number "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Your average is "</span><span class="token punctuation">,</span> total <span class="token operator">/</span> n<span class="token punctuation">)</span>
@@ -79,11 +87,10 @@
     coins <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.1</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.05</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.02</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.01</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">}</span>
 
     <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> coins<span class="token punctuation">:</span>
-        <span class="token keyword">while</span> amount <span class="token operator">&gt;</span> k<span class="token punctuation">:</span>
+        <span class="token keyword">while</span> amount <span class="token operator">&gt;=</span> k<span class="token punctuation">:</span>
             v <span class="token operator">+=</span> <span class="token number">1</span>
             amount <span class="token operator">-=</span> k
         <span class="token keyword">print</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> <span class="token string">":"</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
-
 </code></pre>
 
     </div>
