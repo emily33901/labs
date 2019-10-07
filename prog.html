@@ -13,8 +13,12 @@
     <div class="stackedit__toc">
       
 <ul>
-<li><a href="#programming-lab-book">Programming Lab Book</a></li>
+<li><a href="#programming-lab-book">Programming Lab Book</a>
+<ul>
+<li><a href="#th-september">24th September</a></li>
 <li><a href="#st-october">1st October</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -22,7 +26,48 @@
   <div class="stackedit__right">
     <div class="stackedit__html">
       <h1 id="programming-lab-book">Programming Lab Book</h1>
-<h1 id="st-october">1st October</h1>
+<h2 id="th-september">24th September</h2>
+<pre class=" language-py"><code class="prism  language-py"><span class="token keyword">def</span> <span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"em"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">sayHello2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello\nWorld"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">euros2pounds</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> e<span class="token operator">/</span><span class="token number">1.13</span>
+
+<span class="token keyword">def</span> <span class="token function">addUp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    numa<span class="token punctuation">,</span> numb <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter 2 numbers"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span>
+    numa<span class="token punctuation">,</span> numb <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>numa<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">float</span><span class="token punctuation">(</span>numb<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>numa<span class="token punctuation">,</span> numb<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">changeCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ones <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"How many ones do you have?"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    twos <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"How many twos do you have?"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    fives <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"How many fives do you have?"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"you have "</span><span class="token punctuation">,</span> ones <span class="token operator">+</span> twos<span class="token operator">*</span><span class="token number">2</span> <span class="token operator">+</span> fives<span class="token operator">*</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">"p"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">tenHellos</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"hello, world!"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">weightsTable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">"|"</span><span class="token punctuation">,</span> i <span class="token operator">*</span> <span class="token number">22</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">futureValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    amount <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Initial amount "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    years <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"years "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span> <span class="token punctuation">(</span>years<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        amount <span class="token operator">=</span> amount <span class="token operator">+</span> <span class="token punctuation">(</span>amount <span class="token operator">*</span> <span class="token number">0.055</span><span class="token punctuation">)</span>
+    <span class="token comment">#amount = amount + (amount * 1.055) ** 5</span>
+        
+    <span class="token keyword">print</span> <span class="token punctuation">(</span>amount<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="st-october">1st October</h2>
 <pre class=" language-py"><code class="prism  language-py"><span class="token keyword">from</span> functools <span class="token keyword">import</span> <span class="token builtin">reduce</span>
 
 <span class="token keyword">def</span> <span class="token function">circumferenceOfCircle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
